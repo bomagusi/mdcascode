@@ -27,5 +27,5 @@ jobs:
         # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
         creds: ${{ secrets.AZURE_CREDS }}
         # Show the Defender plans for the subscription 
-        az security pricing list
-
+        #az security pricing list
+        az ad sp create-for-rbac --name GitHubActionsWork
