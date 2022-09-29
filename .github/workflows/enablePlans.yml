@@ -28,5 +28,5 @@ jobs:
         with:
           azcliversion: 2.30.0
           inlineScript: |
-            az ad sp create-for-rbac --name GitHubActionsWork
+            az ad sp create-for-rbac --name GitHubActionsWork --sdk-auth
           
