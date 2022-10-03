@@ -23,10 +23,6 @@ jobs:
           # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
           creds: ${{ secrets.AZURE_CREDS }}
       
-      - name: Azure CLI script
-        uses: azure/CLI@v1
-        with:
-          azcliversion: 2.30.0
-          inlineScript: |
-            az ad sp create-for-rbac --name GitHubActionsWork --sdk-auth
+      - run: |
+          az webapp list --query "[?state=='Running']"
           
